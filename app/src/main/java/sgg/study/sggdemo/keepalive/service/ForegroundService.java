@@ -17,7 +17,7 @@ public class ForegroundService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        startForeground(1,new Notification());
+        //startForeground(1,new Notification());
         startService(new Intent(this,InnnerService.class));
 
 
@@ -34,7 +34,7 @@ public class ForegroundService extends Service {
         @Override
         public void onCreate() {
             super.onCreate();
-            startForeground(1,new Notification());
+            //startForeground(1,new Notification());
             stopSelf();
         }
     }

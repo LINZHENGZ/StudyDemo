@@ -32,9 +32,9 @@ public class TabLayout extends AppCompatActivity {
         setContentView(R.layout.activity_tab_layout);
 
         mviewpage = findViewById(R.id.viewpage);
-        tv_title = (TextView) findViewById(R.id.title);
-
-        tv_title.setText("TabLayout的使用");
+//        tv_title = (TextView) findViewById(R.id.title);
+//
+//        tv_title.setText("TabLayout的使用");
 
         mtabLayout = findViewById(R.id.mtabLayout);
 

@@ -1,14 +1,16 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdk 30
+    compileSdk 35
 
+    namespace 'sgg.study.sggdemo'
     defaultConfig {
         applicationId "sgg.study.sggdemo"
         minSdk 21
-        targetSdk 30
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -23,13 +25,17 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
+    kotlinOptions {
+        jvmTarget = "17" // 确保与 Java 版本一致
+    }
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0" // 确保版本匹配
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
@@ -45,7 +51,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
-
+    //使用GSON来解析网络请求响应
+    implementation 'com.google.code.gson:gson:2.8.6'
 
 
 }
