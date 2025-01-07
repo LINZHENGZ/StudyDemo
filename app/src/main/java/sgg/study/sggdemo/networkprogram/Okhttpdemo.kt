@@ -40,7 +40,6 @@ class Okhttpdemo {
             .addInterceptor(LoggingInterceptor())
             .build()
 
-
     }
 
     fun get(url: String){
@@ -56,19 +55,24 @@ class Okhttpdemo {
     }
 
     fun getAsync(){
+
         val request:Request = Request.Builder()
             .url("").build()
+
         val call:Call = client.newCall(request)
         call.enqueue(object :Callback{
+
             override fun onFailure(call: Call, e: IOException) {
                 TODO("Not yet implemented")
                 Log.e("Okhttpdemo","get response onFailure:${e.message}")
             }
+
             override fun onResponse(call: Call, response: Response) {
                 TODO("Not yet implemented")
                 val body:String? = response.body?.toString()
                 Log.e("Okhttpdemo","get response :${body}")
             }
+
         })
 
     }
@@ -189,6 +193,7 @@ class Okhttpdemo {
             .build()
 
         val call:Call = client.newCall(request)
+
         call.enqueue(object : Callback{
             override fun onFailure(call: Call, e: IOException) {
                 TODO("Not yet implemented")

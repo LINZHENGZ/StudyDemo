@@ -20,7 +20,6 @@ public class ForegroundService extends Service {
         //startForeground(1,new Notification());
         startService(new Intent(this,InnnerService.class));
 
-
     }
 
     //Android 8.0 之前 需要在本地服务中多增加一个服务
